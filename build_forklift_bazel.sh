@@ -4,7 +4,7 @@ echo "Running $0"
 # Change the dir to FORKLIFT_DIR (default forklift)
 cd ${FORKLIFT_DIR:-forklift}
 
-export REGISTRY=localhost:5001
+export REGISTRY=localhost:5000
 export REGISTRY_TAG=latest
 export REGISTRY_ACCOUNT=""
 

@@ -1,7 +1,5 @@
 #!/bin/sh
 
-. ./kind_with_registry.sh
-
 ./build_forklift_bazel.sh
 
 ./deploy_local_forklift_bazel.sh
