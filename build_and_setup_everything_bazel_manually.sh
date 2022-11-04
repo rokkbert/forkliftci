@@ -16,5 +16,7 @@
 
 . ./grant_permissions.sh
 
+kubectl patch --type=merge StorageProfile standard -p '{"spec":{"claimPropertySets":[{"accessModes":["ReadWriteOnce"],"volumeMode":"Filesystem"}]}}'
+
 echo "CLUSTER=$CLUSTER"
 echo "TOKEN=$TOKEN"
