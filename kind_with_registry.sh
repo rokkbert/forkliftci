@@ -6,8 +6,7 @@ set -o errexit
 
 go install sigs.k8s.io/kind@v0.15.0
 
-mkdir -p /tmp/kind_storage
-chmod 777 /tmp/kind_storage
+mkdir -p -m 777 /tmp/kind_storage
 
 # create registry container unless it already exists
 reg_name='kind-registry'
