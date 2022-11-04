@@ -24,7 +24,7 @@ kubectl create -f https://github.com/kubevirt/kubevirt/releases/download/${VIRT_
 
 # Wait for cluster-network-addons operator to start
 while ! kubectl get deployment -n cluster-network-addons cluster-network-addons-operator; do sleep 10; done
-kubectl wait deployment -n cluster-network-addons cluster-network-addons-operator --for condition=Available=True --timeout=180s
+kubectl wait deployment -n cluster-network-addons cluster-network-addons-operator --for condition=Available=True --timeout=600s
 
 # Install macvtap and multus
 cat << EOF | kubectl apply -f -
